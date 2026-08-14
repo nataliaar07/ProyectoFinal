@@ -10,7 +10,12 @@ $resultado = $conexion->query($sql);
 
 if ($resultado && $resultado->num_rows == 1) {
     $_SESSION['usuario'] = $usuario;
-    header("Location: bienvenido.php");
+
+    if ($usuario === 'admin') {
+        header("Location: admin.php");
+    } else {
+        header("Location: bienvenido.php");
+    }
     exit();
 } else {
     echo "Usuario o contraseña incorrectos.";

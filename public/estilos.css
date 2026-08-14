@@ -22,7 +22,6 @@ body {
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
-
 .panel-izquierdo {
     flex: 1;
     background: linear-gradient(to bottom, #a8d5e8 0%, #a8d5e8 60%, #8bc57a 60%, #6ba85a 100%);
@@ -100,8 +99,6 @@ body {
 .link-secundario:hover {
     color: #ffffff;
 }
-
-/* ---------- CATÁLOGO ---------- */
 
 .pagina-catalogo {
     background: #0f1420;
@@ -216,8 +213,6 @@ body {
     color: #8f9bb3;
 }
 
-/* ---------- CARRUSEL ---------- */
-
 .carrusel {
     position: relative;
     width: 100%;
@@ -263,8 +258,6 @@ body {
 .carrusel-btn:hover {
     background: rgba(0,0,0,0.8);
 }
-
-/* ---------- MODAL INFO JUEGO ---------- */
 
 .modal-overlay {
     display: none;
@@ -340,8 +333,6 @@ body {
 .btn-comprar:hover {
     background: #5c4d8c;
 }
-
-/* ---------- COMUNIDAD / RESEÑAS ---------- */
 
 .comunidad {
     padding: 40px;
@@ -421,7 +412,7 @@ body {
 .resena-texto {
     font-size: 13px;
     color: #8f9bb3;
-
+}
 
 .btn-carrito {
     background: #2a3244;
@@ -494,7 +485,6 @@ body {
     margin-top: 10px;
 }
 
-
 .modal-botones {
     display: flex;
     gap: 10px;
@@ -520,7 +510,6 @@ body {
     margin: 0;
 }
 
-
 .checkout-label {
     display: block;
     font-size: 12px;
@@ -539,4 +528,224 @@ body {
     font-size: 14px;
     margin-bottom: 5px;
 }
+
+.pagina-confirmacion {
+    background: #0f1420;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Verdana, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.confirmacion-caja {
+    background: #1b2230;
+    border-radius: 8px;
+    padding: 50px 40px;
+    width: 420px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.confirmacion-icono {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #4b3f72;
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 60px;
+    margin: 0 auto 20px;
+}
+
+.confirmacion-caja h1,
+.confirmacion-caja h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.confirmacion-texto {
+    color: #8f9bb3;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.confirmacion-detalle {
+    background: #2a3244;
+    border-radius: 4px;
+    padding: 14px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.confirmacion-detalle span {
+    color: #8f9bb3;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.confirmacion-detalle strong {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.calificacion-caja {
+    background: #2a3244;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.calificacion-titulo {
+    color: #8f9bb3;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.estrellas {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.estrella {
+    font-size: 32px;
+    color: #4b5570;
+    cursor: pointer;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.estrella:hover,
+.estrella.activa {
+    color: #ffd54f;
+    transform: scale(1.15);
+}
+
+.calificacion-boton {
+    width: 100%;
+    display: block;
+}
+
+.confirmacion-boton {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.admin-tabla-wrapper {
+    background: #1b2230;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.admin-tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-tabla thead {
+    background: #2a3244;
+}
+
+.admin-tabla th {
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 12px;
+    color: #8f9bb3;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.admin-tabla td {
+    padding: 14px 20px;
+    font-size: 14px;
+    color: #ffffff;
+    border-top: 1px solid #2a3244;
+}
+
+.admin-tabla tbody tr:hover {
+    background: #232b3d;
+}
+
+.admin-total {
+    color: #ffd54f;
+    font-weight: bold;
+}
+
+.admin-vacio {
+    text-align: center;
+    color: #8f9bb3;
+    padding: 40px 20px !important;
+}
+
+.admin-pedidos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pedido-card {
+    background: #1b2230;
+    border-radius: 8px;
+    padding: 20px 24px;
+    border-left: 3px solid #4b3f72;
+}
+
+.pedido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.pedido-cliente {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 12px;
+}
+
+.pedido-carnet {
+    font-size: 12px;
+    color: #8f9bb3;
+}
+
+.pedido-total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffd54f;
+}
+
+.pedido-juegos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.pedido-juego-tag {
+    background: #2a3244;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.pedido-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #8f9bb3;
+    border-top: 1px solid #2a3244;
+    padding-top: 10px;
 }

@@ -197,6 +197,10 @@ $carrito = $_SESSION['carrito'] ?? [];
         function cerrarCheckout() {
             document.getElementById('modalCheckout').classList.remove('activo');
         }
+
+        <?php if (isset($_GET['abrir']) && $_GET['abrir'] === 'checkout'): ?>
+        document.addEventListener('DOMContentLoaded', abrirCheckout);
+        <?php endif; ?>
     </script>
 
 </body>
