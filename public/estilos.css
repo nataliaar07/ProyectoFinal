@@ -1,0 +1,542 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f1420;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Verdana, Tahoma, sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+
+.panel-izquierdo {
+    flex: 1;
+    background: linear-gradient(to bottom, #a8d5e8 0%, #a8d5e8 60%, #8bc57a 60%, #6ba85a 100%);
+}
+
+.panel-derecho {
+    flex: 1;
+    background: #1b2230;
+    color: #ffffff;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.panel-derecho h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    font-size: 13px;
+    color: #8f9bb3;
+    margin-bottom: 25px;
+}
+
+.panel-derecho label {
+    font-size: 12px;
+    color: #8f9bb3;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.panel-derecho input[type="text"],
+.panel-derecho input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #1b2230;
+    font-size: 14px;
+}
+
+.panel-derecho input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background: #4b3f72;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+}
+
+.panel-derecho input[type="submit"]:hover {
+    background: #5c4d8c;
+}
+
+.link-secundario {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #8f9bb3;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.link-secundario:hover {
+    color: #ffffff;
+}
+
+/* ---------- CATÁLOGO ---------- */
+
+.pagina-catalogo {
+    background: #0f1420;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Verdana, Tahoma, sans-serif;
+    color: #ffffff;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1b2230;
+    padding: 15px 40px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #8f9bb3;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-derecha {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.buscador {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background: #2a3244;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.btn-salir {
+    background: #4b3f72;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.btn-salir:hover {
+    background: #5c4d8c;
+}
+
+.catalogo {
+    padding: 40px;
+}
+
+.catalogo h1 {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.grid-juegos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.juego-card {
+    background: #1b2230;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.juego-card:hover {
+    transform: translateY(-4px);
+}
+
+.juego-imagen {
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(135deg, #4b3f72, #2a3244);
+}
+
+.juego-info {
+    padding: 12px 15px;
+}
+
+.juego-info h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.juego-precio {
+    font-size: 13px;
+    color: #8f9bb3;
+}
+
+/* ---------- CARRUSEL ---------- */
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.carrusel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.carrusel-slide {
+    min-width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4b3f72, #2a3244);
+}
+
+.carrusel-controles {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+}
+
+.carrusel-btn {
+    background: rgba(0,0,0,0.5);
+    color: #ffffff;
+    border: none;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carrusel-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+/* ---------- MODAL INFO JUEGO ---------- */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-overlay.activo {
+    display: flex;
+}
+
+.modal-caja {
+    background: #1b2230;
+    border-radius: 8px;
+    padding: 30px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #8f9bb3;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.modal-cerrar:hover {
+    color: #ffffff;
+}
+
+.modal-imagen {
+    width: 100%;
+    height: 160px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #4b3f72, #2a3244);
+    margin-bottom: 15px;
+}
+
+.modal-descripcion {
+    color: #8f9bb3;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.modal-detalles {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #8f9bb3;
+    margin-bottom: 15px;
+}
+
+.btn-comprar {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background: #4b3f72;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-comprar:hover {
+    background: #5c4d8c;
+}
+
+/* ---------- COMUNIDAD / RESEÑAS ---------- */
+
+.comunidad {
+    padding: 40px;
+    border-top: 1px solid #2a3244;
+}
+
+.comunidad h1 {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.nueva-resena {
+    background: #1b2230;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.resena-textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background: #2a3244;
+    color: #ffffff;
+    font-family: inherit;
+    resize: vertical;
+    margin-bottom: 12px;
+}
+
+.btn-publicar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background: #4b3f72;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-publicar:hover {
+    background: #5c4d8c;
+}
+
+.lista-resenas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resena-card {
+    background: #1b2230;
+    border-radius: 6px;
+    padding: 15px 20px;
+}
+
+.resena-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.resena-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4b3f72, #2a3244);
+}
+
+.resena-usuario {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.resena-texto {
+    font-size: 13px;
+    color: #8f9bb3;
+
+
+.btn-carrito {
+    background: #2a3244;
+    border: none;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-carrito:hover {
+    background: #37415a;
+}
+
+.carrito-contador {
+    background: #4b3f72;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 10px;
+}
+
+.modal-carrito-caja {
+    width: 420px;
+}
+
+.lista-carrito {
+    max-height: 300px;
+    overflow-y: auto;
+    margin: 15px 0;
+}
+
+.carrito-vacio {
+    color: #8f9bb3;
+    font-size: 13px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2a3244;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.btn-quitar {
+    background: none;
+    border: none;
+    color: #ff8080;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-quitar:hover {
+    text-decoration: underline;
+}
+
+.carrito-footer {
+    margin-top: 10px;
+}
+
+
+.modal-botones {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-agregar {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background: #2a3244;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-agregar:hover {
+    background: #37415a;
+}
+
+.modal-botones .btn-comprar {
+    flex: 1;
+    margin: 0;
+}
+
+
+.checkout-label {
+    display: block;
+    font-size: 12px;
+    color: #8f9bb3;
+    margin-bottom: 5px;
+    margin-top: 12px;
+}
+
+.checkout-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #2a3244;
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+}
